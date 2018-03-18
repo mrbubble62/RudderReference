@@ -40,7 +40,6 @@ float GetVREFH() {
 }
 
 
-
 // EEPROM configuration structure
 #define MAGIC 12345 // EPROM struct version check, change this whenever tConfig structure changes
 struct tConfig {
@@ -220,7 +219,7 @@ void SlowLoop() {
 			Blink(20, 150);
 		}
 		else {
-			Serial.print("\Instance changed to: "); Serial.print(DeviceInstance);
+			Serial.print("\nInstance changed to: "); Serial.print(DeviceInstance);
 			config.deviceInstance = DeviceInstance;
 			UpdateConfig();
 		}
@@ -251,23 +250,6 @@ void Blink(int count, unsigned long duration) {
 	}
 }
 
-//non blocking blink
-IntervalTimer myTimer;
-const int ledPin = LED_BUILTIN;
-int ledState = LOW;
-volatile unsigned long blinkCount = 0;
-void blinkLED() {
-	if (ledState == LOW) {
-		ledState = HIGH;
-		blinkCount = blinkCount + 1;  // increase when LED turns on
-	}
-	else {
-		ledState = LOW;
-	}
-	digitalWrite(ledPin, ledState);
-}
-
-
 // EEPROM *****************************************************************************
 //Load From EEPROM 
 void ReadConfig() {
@@ -287,12 +269,6 @@ void InitializeEEPROM() {
 	Serial.println("Initialize EEPROM");
 	config = defConfig;
 	UpdateConfig();
-}
-
-// Load settings from EEPROM
-void LoadConfig() {
-	if (config.Zero) offsetVoltage = config.Zero;
-	if (config.Gain) offsetVoltage = config.Gain;
 }
 
 void print(){
