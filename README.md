@@ -2,7 +2,7 @@
 NMEA 2000 Rudder Reference
 
 ### Tested Hardware
-Teensy 3.2 
+Teensy 3.2
 MCP2562 CAN Transceiver
 LM7805 5V Linear regulator
 0.25A Poly fuse
