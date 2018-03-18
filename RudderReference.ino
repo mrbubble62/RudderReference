@@ -177,6 +177,7 @@ void loop() {
 		digitalWrite(LED_BUILTIN, LOW);
 
 		if (GAIN != 0) {
+			SDATA = true;
 			gain += (gain / 500)*GAIN;
 			Serial.print("GAIN: ");
 			Serial.println(gain);
@@ -306,5 +307,5 @@ void PrintHelp()
 {
 	Serial.println(F("Mr Bubble Rudder Reference"));
 	Serial.println(F("Commands: \"p\"=show data, \"d\"=show ADC voltages, \"z\"=save current position as zero reference, \"+\"=ingrease gain,\"-\"=decrease gain, \"w\"=save gain setting to EEPROM"));
-	Serial.println(F("Alignment:\nCenter the wheel and press 'z' to align the rudder reference, turn to 90 degrees and use the + and - keys to adjust gain"));
+	Serial.println(F("Alignment: Center the wheel and press 'z' to align the rudder reference, turn to 90 degrees and use the + and - keys to adjust gain"));
 }
