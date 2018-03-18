@@ -2,11 +2,11 @@
 NMEA 2000 Rudder Reference
 
 ### Tested Hardware
-Teensy 3.2
-MCP2562 CAN Transceiver
-LM7805 5V Linear regulator
-0.25A Poly fuse
-5K ohm Linear 0.1% WDD35D4-5K Angle Sensors
+- Teensy 3.2
+- MCP2562 CAN Transceiver
+- LM7805 5V Linear regulator
+- 0.25A Poly fuse
+- 5K ohm Linear 0.1% WDD35D4-5K Angle Sensors
 
 ##PGN's sent 
 127245 Rudder angle in radians every 250ms
