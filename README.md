@@ -8,7 +8,7 @@ NMEA 2000 Rudder Reference
 - 0.25A Poly fuse
 - 5K ohm Linear 0.1% WDD35D4-5K Angle Sensors
 
-##PGN's sent 
+## PGN's sent 
 127245 Rudder angle in radians every 250ms
 
 ## Initial calibration via USB serial
