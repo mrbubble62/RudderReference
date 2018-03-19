@@ -8,21 +8,20 @@
 #define STDBYPIN 14 // MCP2562 CAN tranciver standby
 #define ADCRESOLUTION 16
 #define DEG2RAD 0.01745329252
-#define ADCNUM 1 // ADC 1 seems less noisy
+#define ADCNUM 1 // ADC 1 seems slightly less noisy
 const uint8_t ADCPIN = PIN_A2; // ADC0 or 1
-
 double scale = 0.00950; // volts per degree
-double VREF = 3.307; //ADC Reference voltage
-double offsetVoltage; // center point voltage offset
-double position; //angle in degrees
-
-uint16_t adcCount = 0;
-double volts = 0;
-double gain = 1.000;
+double VREF = 3.307;	// measured ADC Reference voltage
+double offsetVoltage;	// center point voltage offset
+double position;		//angle in degrees
+uint16_t adcCount = 0; // ADC value in counts
+double volts = 0; // measured ADC voltage
+double gain = 1.000;  // sensor gain  compensate for potentiometer accuracy 5K 5%
 ADC* adc = new ADC();
-
 float average = 0;
 const int NUM_AVGS = 100;
+
+// VREF_OUT test function
 float GetVREF() {
 	average = 0;
 	for (int i = 0; i<NUM_AVGS; i++) {
@@ -31,6 +30,7 @@ float GetVREF() {
 	return average / NUM_AVGS;
 }
 
+// VREFH test function
 float GetVREFH() {
 	average = 0;
 	for (int i = 0; i<NUM_AVGS; i++) {
@@ -38,7 +38,6 @@ float GetVREFH() {
 	}
 	return average / NUM_AVGS;
 }
-
 
 // EEPROM configuration structure
 #define MAGIC 12345 // EPROM struct version check, change this whenever tConfig structure changes
@@ -83,11 +82,10 @@ void setup() {
 	ReadConfig();
 	if (config.Magic != MAGIC) {
 		InitializeEEPROM();
-		Serial.println(F("\nNo stored calibration\n"));
+		Serial.println(F("No stored calibration..\n"));
 		delay(5000);
 	}
-	else
-	{
+	else {
 		Serial.println(F("Loading stored calibration..\n"));
 		PrintConfig();
 		gain = config.Gain;
@@ -128,10 +126,9 @@ void setup() {
 	PrintHelp();
 }
 
-uint32_t delt_t = 0; // used to control display output rate
-uint32_t count = 0, sumCount = 0; // used to control display output rate
-uint32_t lastUpdate = 0, firstUpdate = 0; // used to calculate integration interval
-uint32_t Now = 0;        // used to calculate integration interval
+// loop controls
+uint32_t delt_t = 0; // 250 ms loop
+uint32_t count = 0; // 250 ms loop
 long slowloop = 0; // 1s loop
 
 // USB serial commands
@@ -171,8 +168,6 @@ void loop() {
 	// 250ms 
 	delt_t = millis() - count;
 	if (delt_t > 250) { // fast update once per 250ms independent of read rate
-		Now = micros();
-		lastUpdate = Now;
 		count = millis();
 		digitalWrite(LED_BUILTIN, LOW);
 

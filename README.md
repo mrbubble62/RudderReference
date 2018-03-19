@@ -1,11 +1,12 @@
 # Rudder Reference
-Low cost NMEA 2000 compatible rudder reference
+Low cost NMEA 2000 compatible rudder reference.
+
 
 ## PGN's sent 
-127245 Rudder angle in radians every 250ms
+127245 Rudder angle in radians every 250ms.
 
 ## Initial calibration via USB serial
-Center the sensor and press 'z' to set zero angle, turn 90 degrees and use the + and - keys to adjust gain
+Center the sensor and press 'z' to set zero angle, turn 90 degrees and use the + and - keys to adjust gain.
 
 ## Zero setting in vessel
 Center the rudder and from an MFD change the device instance to 200.
@@ -19,3 +20,12 @@ The device will return to the prevoiusly set N2K device instance, this may confu
 - 0.25A Poly fuse
 - 5K ohm Linear 0.1% WDD35D4-5K Angle Sensors
 
+## Notes
+WDD35D4 Angle Sensor potentiometers claim a reliable plastic track with good linearity and are availible on eBay for ~$10.
+Teensy ADC is good for 12-13bits giving a resolution of 0.04-0.08 degrees.
+
+## Prototype images
+Ugly but functional prototype
+ ![Prototype](/mrbubble62/RudderReference/board1.png)
+ ![Prototype](/mrbubble62/RudderReference/board2.png)
+ ![Prototype](/mrbubble62/RudderReference/board3.png)
