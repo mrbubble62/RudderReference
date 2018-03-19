@@ -26,6 +26,6 @@ Teensy ADC is good for 12-13bits giving a resolution of 0.04-0.08 degrees.
 
 ## Prototype images
 Ugly but functional prototype
- ![Prototype](/mrbubble62/RudderReference/board1.png)
- ![Prototype](/mrbubble62/RudderReference/board2.png)
- ![Prototype](/mrbubble62/RudderReference/board3.png)
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board1.png?raw=true)
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board2.png?raw=true)
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board3.png?raw=true)
