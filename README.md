@@ -25,7 +25,11 @@ WDD35D4 Angle Sensor potentiometers claim a reliable plastic track with good lin
 Teensy ADC is good for 12-13bits giving a resolution of 0.04-0.08 degrees.
 
 ## Prototype images
-Ugly but functional prototype
- ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board1.png?raw=true)
- ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board2.png?raw=true)
- ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/board3.png?raw=true)
+Ugly but functional prototype  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/board1.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/board2.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/board3.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/housing.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/housing2.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/anodized.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/images/WDD35D4.jpg?raw=true)
