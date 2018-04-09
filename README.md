@@ -1,6 +1,7 @@
 # Rudder Reference
 Low cost NMEA 2000 compatible rudder reference.
 
+ ![Finished](https://github.com/mrbubble62/RudderReference/blob/master/images/finished.png?raw=true)  
 
 ## PGN's sent 
 127245 Rudder angle in radians every 250ms.
@@ -26,10 +27,11 @@ Teensy ADC is good for 12-13bits giving a resolution of 0.04-0.08 degrees.
 
 ## Prototype images
 Ugly but functional prototype  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/board1.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/board2.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/board3.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/housing.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/housing2.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/anodized.png?raw=true)  
- ![Prototype](https://github.com/mrbubble62/RudderReference/images/WDD35D4.jpg?raw=true)
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/board1.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/board2.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/board3.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/housing.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/housing2.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/anodized.png?raw=true)  
+ ![Prototype](https://github.com/mrbubble62/RudderReference/blob/master/images/WDD35D4.jpg?raw=true)
+
